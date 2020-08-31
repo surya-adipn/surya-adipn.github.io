@@ -1,10 +1,10 @@
 function msg() {
     var email = document.getElementById("email").value;
     var pwd = document.getElementById("password").value;
-    if (email.length == 0 && pwd.length == 0) {
+    if (email.length == 0 || pwd.length == 0) {
         alert("Pastikan anda telah mengisi email dan password anda dengan benar.")
     }
-    else if (email.length != 0 && pwd.length < 4) {
+    else if (email.length > 0 && pwd.length < 4) {
         alert("Password minimal 4 karakter, mohon ulangi kembali.")
         clearField();
     } else {
